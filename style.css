@@ -1,0 +1,300 @@
+:root{
+    --DesaturatedRed-: 0, 36%, 70%;
+    --SoftRed-: 0, 93%, 68%;
+    --DarkGrayishRed-: 0, 6%, 24%;
+    --Linear1-: 0, 0%, 100%;
+    --Linear2-: 0, 100%, 98%;
+    --Linear3-: 0, 80%, 86%;
+    --Linear4-: 0, 74%, 74%;
+    --font-: 'Josefin Sans', sans-serif;
+}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }   
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+html, body, div, img, p, span{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    height: 90vh;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    /* padding: 0px 100px 0px 100px; */
+}
+.text > img{
+    margin: 100px 0px 50px 150px;
+}
+.text > p:nth-child(3){
+    font-size: 50px;
+    margin: 0px 300px 20px 150px;
+    letter-spacing: 8px;
+    font-weight: 900;
+    color: hsl(var(--DarkGrayishRed-));
+}
+.text > p:nth-child(2){
+    margin: 0px 0px 0px 150px;
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    color: hsl(var(--DesaturatedRed-));
+}
+.text > p:nth-child(4){
+    margin: 0px 320px 30px 150px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: hsl(var(--DesaturatedRed-));
+}
+.pic > picture >img{
+    height: 100vh;
+}
+.email{
+    border: 1px solid hsl(var(--DarkGrayishRed-));
+    margin: 0px 320px 0px 150px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsl(var(--DesaturatedRed-));
+}
+.email1{
+    padding-left: 30px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.email1 > input{
+    border: none;
+    outline: none;
+    border: 1px solid white;
+}
+.email2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email2-img{
+    position: relative;
+    display: none;
+}
+.email2-img > img{
+    width: 17px;
+    position: absolute;
+    top: -10px;
+    right: 2px;
+}
+.email2-icon > button{
+    background: linear-gradient(135deg, hsl(var(--Linear3-)), hsl(var(--Linear4-)));
+    width: 70px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px hsl(var(--DesaturatedRed-));
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+.email2-icon > button:hover{
+    width: 75px;
+    height: 40px;
+    background-color: hsl(var(--DesaturatedRed-));
+}
+.text > p:nth-child(6){
+    color: hsl(var(--SoftRed-));
+    font-weight: 700;
+    font-size: 12px;
+    margin: 10px 0px 0px 180px;
+    display: none;
+}
+
+
+
+
+@media (max-width:425px){
+    .container{
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .text{
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .text > img{
+        position: absolute;
+        top: 40px;
+        margin-right: 0;
+        margin-left: 40px;
+        width: 100px;
+        margin-top: 0;
+    }
+    .text > p:nth-child(2){
+        margin: 0px 0px;
+        text-align: center;
+        font-size: 32px;
+    }
+    .text > p:nth-child(3){
+        margin: 0px auto 20px;
+        text-align: center;
+        font-size: 32px;
+        max-width: 70%;
+    }
+    .text > p:nth-child(4){
+        margin: 0px auto;
+        text-align: center;
+        max-width: 65%;
+        margin-bottom: 25px;
+    }
+    .email{
+        margin: 0px auto;
+        width: 70%;
+        margin: 0px auto 5px;
+    }
+    
+    .text > p:nth-child(6){
+        margin: 0px 0px 0px 80px;
+    }
+    .pic > picture >img{
+        max-width: 100vh;
+        height: 100%;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width:375px){
+    .container{
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .text{
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .text > img{
+        position: absolute;
+        top: 40px;
+        margin-right: 0;
+        margin-left: 40px;
+        width: 100px;
+        margin-top: 0;
+    }
+    .text > p:nth-child(2){
+        margin: 0px 0px;
+        text-align: center;
+        font-size: 32px;
+    }
+    .text > p:nth-child(3){
+        margin: 0px auto 20px;
+        text-align: center;
+        font-size: 32px;
+        max-width: 70%;
+    }
+    .text > p:nth-child(4){
+        margin: 0px auto;
+        text-align: center;
+        max-width: 65%;
+        margin-bottom: 25px;
+    }
+    .email{
+        margin: 0px auto;
+        width: 80%;
+        margin: 0px auto 5px;
+    }
+    
+    .text > p:nth-child(6){
+        margin: 0px 0px 0px 80px;
+    }
+    .pic > picture >img{
+        max-width: 100vh;
+        height: 100%;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-width:320px){
+    .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding: 0;
+    }
+    .text{
+        height: 100%;
+        padding-top: 50px;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .text > img{
+        position: absolute;
+        top: 40px;
+        margin-right: 0;
+        margin-left: 40px;
+        width: 100px;
+        margin-top: 0;
+    }
+    .text > p:nth-child(2){
+        margin: 0px 0px;
+        text-align: center;
+        font-size: 32px;
+    }
+    .text > p:nth-child(3){
+        margin: 0px auto 20px;
+        text-align: center;
+        font-size: 32px;
+        max-width: 70%;
+    }
+    .text > p:nth-child(4){
+        margin: 0px auto;
+        text-align: center;
+        max-width: 65%;
+        margin-bottom: 25px;
+    }
+    .email{
+        margin: 0px auto;
+        width: 80%;
+        margin: 0px 40px 5px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .email1 > input{
+        width: 100%;
+    }
+    .email2-icon{
+        margin-right: 0px;
+    }
+
+    .text > p:nth-child(6){
+        margin: 0px 0px 0px 80px;
+    }
+    .pic > picture >img{
+        max-width: 100vh;
+        height: 100%;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+}
